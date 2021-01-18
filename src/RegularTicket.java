@@ -1,7 +1,7 @@
 
 public class RegularTicket extends  Ticket{
 
-    String specialService;
+    private String specialService;
 
     RegularTicket(String pnr,
             String departureLocation,

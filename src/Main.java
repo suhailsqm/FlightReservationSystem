@@ -42,7 +42,7 @@ public class Main {
 
         String arrivalTime = "21/01/01 23:23:34";
         String departureTime ="20/12/31 5:23:32";
-        RegularTicket rt = new RegularTicket("13232","bhubaneshwar",
+        RegularTicket rt = new RegularTicket("232","bhubaneshwar",
                 "visakhapatnam",f,
                 departureTime,arrivalTime,p,213,6000,false,null);
         System.out.println(rt.checkStatusCancelled());
@@ -51,6 +51,7 @@ public class Main {
         System.out.println(rt.checkStatusCancelled());
         System.out.println(rt.getSpecialService());
         rt.updateSpecialService(null);
+        printTicketDetails(rt);
 
         String[] touristLocations = {"shimla","manali","ooty"};
         TouristTicket tt = new TouristTicket("13232","bhubaneshwar",
@@ -62,12 +63,12 @@ public class Main {
         tt.setStatusCancelled();
         System.out.println(tt.checkStatusCancelled());
         System.out.println(tt.getHotelAddress());
-        for (String s: tt.touristLocations){
+        for (String s: tt.getTouristLocations()){
             System.out.println(s);
         }
-
-
-
-
+        printTicketDetails(tt);
+    }
+    public static void printTicketDetails(Ticket ticket) {
+        System.out.println(ticket.getPnr());
     }
 }

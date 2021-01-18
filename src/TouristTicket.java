@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class TouristTicket extends  Ticket{
 
-    String hotelAddress;
-    String[] touristLocations;
+    private String hotelAddress;
+    private String[] touristLocations;
 
     TouristTicket(String pnr,
                   String departureLocation,
@@ -59,5 +59,7 @@ public class TouristTicket extends  Ticket{
             }
         }
     }
-
+    public String[] getTouristLocations() {
+        return touristLocations;
+    }
 }
