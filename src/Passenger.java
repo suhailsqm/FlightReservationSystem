@@ -1,7 +1,7 @@
-import  java.util.*;
+
 
 public class Passenger {
-    private  int id;
+    final private  int id;
     private Contact contact;
     private Address address;
     private static int idCounter;
@@ -61,12 +61,13 @@ public class Passenger {
     }
 
     public  Passenger(String name,String phoneNumber, String emailId,String street, String city, String state ){
-        Contact contact = new Contact(name, phoneNumber, emailId);
-        this.contact = contact;
-        Address address = new Address(street, city, state);
-        this.address = address;
+        this.contact = new Contact(name, phoneNumber, emailId);
+        this.address = new Address(street, city, state);
         this.idCounter++;
         this.id = idCounter;
+    }
+    static {
+        idCounter = 0;
     }
     public int getId() {
         return  id;
@@ -77,12 +78,18 @@ public class Passenger {
     public void setContact(String name,String phoneNumber, String emailId) {
         this.contact.setContactDetails(name,phoneNumber,emailId);
     }
+    public void setContact(String contact) {
+        this.contact.setContactDetails(contact);
+    }
 
     public String getAddress() {
         return  address.getAddressDetails();
     }
     public void setAddress(String street, String city, String state ) {
         this.address.updateAddressDetails(street,city,state);
+    }
+    public void setAddress(String addr){
+        this.address.updateAddressDetails(addr);
     }
     public static  int getIdCounter() {
         return idCounter;
