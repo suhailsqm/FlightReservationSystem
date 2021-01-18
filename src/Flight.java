@@ -1,7 +1,7 @@
 public class Flight {
-    private int flight;
-    private String airLine;
-    private int totalCapacity;
+    final private int flight;
+    final private String airLine;
+    final private int totalCapacity;
     private int numOfSeatsBooked;
 
     Flight(int flight,String airLine,int totalCapacity, int numOfSeatsBooked) {
@@ -14,10 +14,7 @@ public class Flight {
         return flight+ "@" +airLine+"@"+numOfSeatsBooked;
     }
     public boolean checkAvailability() {
-        if(totalCapacity >= numOfSeatsBooked) {
-            return  true;
-        } else
-            return false;
+        return totalCapacity >= numOfSeatsBooked;
     }
     public void updateBookedSeats(int numOfSeatsNeeded) {
         numOfSeatsBooked = numOfSeatsBooked + numOfSeatsNeeded;
