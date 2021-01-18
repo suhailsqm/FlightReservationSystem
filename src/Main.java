@@ -1,4 +1,4 @@
-import  java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -34,6 +34,9 @@ public class Main {
 
         Passenger p1 = new Passenger("blue","9877665766",
                 "asd@gmail.com","gandhi street", "vizag","AP");
+        System.out.println(p1.getAddress());
+        p1.setAddress("lalitha street@visakhapatnam@AP");
+
         System.out.println(p1.getAddress());
         System.out.println(p1.getContact());
         System.out.println(p1.getId());

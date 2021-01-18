@@ -20,7 +20,7 @@ public class RegularTicket extends  Ticket{
     }
 
     public String getSpecialService() {
-        return null;
+        return this.specialService;
     }
     public void updateSpecialService(String specialService) {
         this.specialService = specialService;
