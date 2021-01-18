@@ -38,7 +38,7 @@ public class RegularTicket {
         this.seatNumber = seatNumber;
         this.costPrice = costPrice;
         this.statusCancelled = statusCancelled;
-        this. specialService = specialService;
+        this.specialService = specialService;
     }
     public boolean checkStatusCancelled() {
           return statusCancelled;
