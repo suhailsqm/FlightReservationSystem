@@ -3,8 +3,7 @@ public class RegularTicket extends  Ticket{
 
     private String specialService;
 
-    RegularTicket(String pnr,
-            String departureLocation,
+    RegularTicket(String departureLocation,
             String destinationLocation,
             Flight flight,
             String dateTimeOfDeparture,
@@ -14,7 +13,7 @@ public class RegularTicket extends  Ticket{
             double costPrice,
             boolean statusCancelled,
             String specialService) {
-        super(pnr,departureLocation,destinationLocation,flight,dateTimeOfDeparture,dateTimeOfArrival,
+        super(departureLocation,destinationLocation,flight,dateTimeOfDeparture,dateTimeOfArrival,
         passenger,seatNumber,costPrice,statusCancelled);
         this.specialService = specialService;
     }
